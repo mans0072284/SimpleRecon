@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+    commands:
+      - echo Executing all the building phases...
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+  build:
+    commands:
+      - echo Entered the build phase...
+      - echo Build started on `date`
+      - mvn clean install
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - mv target/SimpleRecon.war ./
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - SimpleRecon.war/**/*
