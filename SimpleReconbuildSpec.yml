@@ -1,8 +1,6 @@
 version: 0.2
 
 phases:
-    commands:
-      - echo Executing all the building phases...
   pre_build:
     commands:
       - echo Entered the pre_build phase...
